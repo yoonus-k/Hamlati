@@ -1,5 +1,8 @@
 <?php
 
+use App\Models\Bookings;
+use App\Models\Hajjs;
+use Illuminate\Console\View\Components\Alert;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,7 +15,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
     return view('welcome');
 });
@@ -20,3 +22,34 @@ Route::get('/', function () {
 Route::get('/form', function () {
     return view('form');
 });
+
+Route::post('/create', function () {
+    $booking = new Bookings();
+    $booking->national_id = request('national_id');
+    $booking->name = request('name');
+    $booking-> gender= request('gender');
+    $booking->age = request('age');
+    $booking->nationality = request('nationality');
+    $booking->group_id = request('group_id');
+    $booking->special_needs = request('special_needs');
+    $booking->medical_conditions = request('medical_conditions');
+    $booking->save();
+    return redirect('/form');
+});
+
+Route::get ("/upload",function(){
+    return view('upload');
+}); 
+Route::post ('/upload',function(){
+    $hajjs=new Hajjs();
+   
+   $file = request('CSV');
+   // write your logic here 
+
+   $hajjs->first_name="Ahmed";
+
+   $hajjs -> save();
+   return redirect('/');
+
+
+}); 
