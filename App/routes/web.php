@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HajjsController;
 use App\Models\Bookings;
 use App\Models\Hajjs;
 use Illuminate\Console\View\Components\Alert;
@@ -40,16 +41,4 @@ Route::post('/create', function () {
 Route::get ("/upload",function(){
     return view('upload');
 }); 
-Route::post ('/upload',function(){
-    $hajjs=new Hajjs();
-   
-   $file = request('CSV');
-   // write your logic here 
-
-   $hajjs->first_name="Ahmed";
-
-   $hajjs -> save();
-   return redirect('/');
-
-
-}); 
+Route::post('/upload-csv', [HajjsController::class, 'uploadCSV'])->name('upload.csv');
