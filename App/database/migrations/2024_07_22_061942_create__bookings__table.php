@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('group_id');
             $table->string('special_needs');
             $table->string('medical_conditions');
-            
+            $table->timestamps();
 
         });
     }

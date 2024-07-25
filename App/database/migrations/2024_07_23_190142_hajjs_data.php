@@ -14,10 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('hajjs', function (Blueprint $table) {
-            $table->id();
-            $table->string("first_name");
-           
+            $table->id(); // Auto-increment primary key
+            $table->string('pilgrim_id'); // Pilgrim_ID from CSV
+            $table->string('national_id_iqama'); // National_ID/Iqama as string
+            $table->string('first_name'); // Splitted from Name
+            $table->string('last_name'); // Splitted from Name
+            $table->char('gender', 1); // Gender (M/F)
         });
+
     }
 
     /**
