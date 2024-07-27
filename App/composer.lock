@@ -4,8 +4,68 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c7b2698ad003d1f0af8420bd710e4732",
+    "content-hash": "68b96ead837f34fec5f3b3c3d1f603f6",
     "packages": [
+        {
+            "name": "bhavingajjar/laravel-python",
+            "version": "v1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bhavingajjar/laravel-python.git",
+                "reference": "9a401d8f0ae4b60dd3106cd80b922fa8f6a6e407"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bhavingajjar/laravel-python/zipball/9a401d8f0ae4b60dd3106cd80b922fa8f6a6e407",
+                "reference": "9a401d8f0ae4b60dd3106cd80b922fa8f6a6e407",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^8.0|^9.0|^10.0",
+                "php": "^7.4|^8.0"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.0",
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Bhavingajjar\\LaravelPython\\LaravelPythonServiceProvider"
+                    ],
+                    "aliases": {
+                        "LaravelPython": "Bhavingajjar\\LaravelPython\\LaravelPythonFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Bhavingajjar\\LaravelPython\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bhavin Gajjar",
+                    "email": "gajjarbhavin22@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Run Python scripts inside your Laravel",
+            "homepage": "https://github.com/bhavingajjar/laravel-python",
+            "keywords": [
+                "bhavingajjar",
+                "laravel-python"
+            ],
+            "support": {
+                "source": "https://github.com/bhavingajjar/laravel-python/tree/v1.0.1"
+            },
+            "time": "2023-07-21T16:48:55+00:00"
+        },
         {
             "name": "brick/math",
             "version": "0.11.0",
@@ -684,16 +744,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "7.9.1",
+            "version": "7.9.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "a629e5b69db96eb4939c1b34114130077dd4c6fc"
+                "reference": "d281ed313b989f213357e3be1a179f02196ac99b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/a629e5b69db96eb4939c1b34114130077dd4c6fc",
-                "reference": "a629e5b69db96eb4939c1b34114130077dd4c6fc",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/d281ed313b989f213357e3be1a179f02196ac99b",
+                "reference": "d281ed313b989f213357e3be1a179f02196ac99b",
                 "shasum": ""
             },
             "require": {
@@ -790,7 +850,7 @@
             ],
             "support": {
                 "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/7.9.1"
+                "source": "https://github.com/guzzle/guzzle/tree/7.9.2"
             },
             "funding": [
                 {
@@ -806,7 +866,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-07-19T16:19:57+00:00"
+            "time": "2024-07-24T11:22:20+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -1673,50 +1733,33 @@
         },
         {
             "name": "league/csv",
-            "version": "9.16.0",
+            "version": "8.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/csv.git",
-                "reference": "998280c6c34bd67d8125fdc8b45bae28d761b440"
+                "reference": "0a1b535df48507f58ed3c7ab44e72272b11163ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/csv/zipball/998280c6c34bd67d8125fdc8b45bae28d761b440",
-                "reference": "998280c6c34bd67d8125fdc8b45bae28d761b440",
+                "url": "https://api.github.com/repos/thephpleague/csv/zipball/0a1b535df48507f58ed3c7ab44e72272b11163ac",
+                "reference": "0a1b535df48507f58ed3c7ab44e72272b11163ac",
                 "shasum": ""
             },
             "require": {
-                "ext-filter": "*",
-                "php": "^8.1.2"
+                "ext-mbstring": "*",
+                "php": ">=5.5.0"
             },
             "require-dev": {
-                "doctrine/collections": "^2.2.2",
-                "ext-dom": "*",
-                "ext-xdebug": "*",
-                "friendsofphp/php-cs-fixer": "^3.57.1",
-                "phpbench/phpbench": "^1.2.15",
-                "phpstan/phpstan": "^1.11.1",
-                "phpstan/phpstan-deprecation-rules": "^1.2.0",
-                "phpstan/phpstan-phpunit": "^1.4.0",
-                "phpstan/phpstan-strict-rules": "^1.6.0",
-                "phpunit/phpunit": "^10.5.16 || ^11.1.3",
-                "symfony/var-dumper": "^6.4.6 || ^7.0.7"
-            },
-            "suggest": {
-                "ext-dom": "Required to use the XMLConverter and the HTMLConverter classes",
-                "ext-iconv": "Needed to ease transcoding CSV using iconv stream filters",
-                "ext-mbstring": "Needed to ease transcoding CSV using mb stream filters"
+                "fabpot/php-cs-fixer": "^1.9",
+                "phpunit/phpunit": "^4.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "9.x-dev"
+                    "dev-master": "8.0-dev"
                 }
             },
             "autoload": {
-                "files": [
-                    "src/functions_include.php"
-                ],
                 "psr-4": {
                     "League\\Csv\\": "src"
                 }
@@ -1733,31 +1776,22 @@
                     "role": "Developer"
                 }
             ],
-            "description": "CSV data manipulation made easy in PHP",
-            "homepage": "https://csv.thephpleague.com",
+            "description": "Csv data manipulation made easy in PHP",
+            "homepage": "http://csv.thephpleague.com",
             "keywords": [
-                "convert",
                 "csv",
                 "export",
                 "filter",
                 "import",
                 "read",
-                "transform",
                 "write"
             ],
             "support": {
-                "docs": "https://csv.thephpleague.com",
+                "forum": "https://groups.google.com/forum/#!forum/thephpleague",
                 "issues": "https://github.com/thephpleague/csv/issues",
-                "rss": "https://github.com/thephpleague/csv/releases.atom",
-                "source": "https://github.com/thephpleague/csv"
+                "source": "https://github.com/thephpleague/csv/tree/master"
             },
-            "funding": [
-                {
-                    "url": "https://github.com/sponsors/nyamsprod",
-                    "type": "github"
-                }
-            ],
-            "time": "2024-05-24T11:04:54+00:00"
+            "time": "2015-12-11T09:28:14+00:00"
         },
         {
             "name": "league/flysystem",
@@ -3239,6 +3273,48 @@
                 }
             ],
             "time": "2024-04-27T21:32:50+00:00"
+        },
+        {
+            "name": "robertogallea/laravel-python",
+            "version": "0.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/robertogallea/LaravelPython.git",
+                "reference": "292487bb4a35da0e635f83f66441c6c5fddf573e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/robertogallea/LaravelPython/zipball/292487bb4a35da0e635f83f66441c6c5fddf573e",
+                "reference": "292487bb4a35da0e635f83f66441c6c5fddf573e",
+                "shasum": ""
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.7",
+                "phpunit/phpunit": "^9.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "robertogallea\\LaravelPython\\ServiceProvider"
+                    ],
+                    "aliases": {
+                        "Python": "robertogallea\\LaravelPython\\Facades\\PythonFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "robertogallea\\LaravelPython\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "Run python scripts inside Laravel app",
+            "support": {
+                "issues": "https://github.com/robertogallea/LaravelPython/issues",
+                "source": "https://github.com/robertogallea/LaravelPython/tree/0.1.1"
+            },
+            "time": "2020-12-15T15:30:22+00:00"
         },
         {
             "name": "symfony/console",

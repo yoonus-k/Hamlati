@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Hajjs;
+use Illuminate\Support\Facades\Log;
 
 class HajjsController extends Controller
 {
@@ -34,7 +35,7 @@ class HajjsController extends Controller
         fclose($handle);
 
         // Log CSV data for debugging
-        \Log::info('CSV Data: ' . print_r($all, true));
+        Log::info('CSV Data: ' . print_r($all, true));
 
         // Process each row of data
         foreach ($all as $row) {
@@ -50,10 +51,10 @@ class HajjsController extends Controller
                     $hajjs->gender = $row[3]; // Gender (M/F)
                     $hajjs->save();
                 } catch (\Exception $e) {
-                    \Log::error('Error saving record: ' . $e->getMessage());
+                    Log::error('Error saving record: ' . $e->getMessage());
                 }
             } else {
-                \Log::warning('Skipped row due to insufficient columns: ' . print_r($row, true));
+                Log::warning('Skipped row due to insufficient columns: ' . print_r($row, true));
             }
         }
 

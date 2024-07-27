@@ -5,6 +5,7 @@ use App\Models\Bookings;
 use App\Models\Hajjs;
 use Illuminate\Console\View\Components\Alert;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PythonController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,3 +43,9 @@ Route::get ("/upload",function(){
     return view('upload');
 }); 
 Route::post('/upload-csv', [HajjsController::class, 'uploadCSV'])->name('upload.csv');
+
+
+// route for python controller
+
+
+Route::get('/pythonScript', [PythonController::class, 'index']);
